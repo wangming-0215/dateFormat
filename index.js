@@ -44,10 +44,7 @@ function makeFormatFunction(format) {
   };
 }
 
-function dateFormat(date, format) {
+export function dateFormat(date, format) {
   if (!isDate(date)) throw new Error(`'date' must be a instance of Date`);
   return makeFormatFunction(format)(date);
 }
-
-const formatted = dateFormat(new Date(), 'YYYY-MM-dd HH:mm:ss');
-console.log(formatted);
