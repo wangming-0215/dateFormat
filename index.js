@@ -45,6 +45,6 @@ function makeFormatFunction(format) {
 }
 
 export function dateFormat(date, format) {
-  if (!isDate(date)) throw new Error(`'date' must be a instance of Date`);
+  if (!isDate(date)) throw new Error(`'date' must be an instance of Date`);
   return makeFormatFunction(format)(date);
 }
